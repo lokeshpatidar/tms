@@ -1,0 +1,255 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Add_User_Details.aspx.cs" Inherits="TMS.Add_User_Details" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
+    <style type="text/css">
+        .style5
+        {
+            width: 100%;
+        }
+        .style6
+        {
+            background-color: #6699FF;
+        }
+        .style7
+        {
+            font-size: x-small;
+            text-decoration: underline;
+        }
+        .style8
+        {
+            width: 10px;
+        }
+        .style9
+        {
+            width: 177px;
+        }
+        .style10
+        {
+            width: 379px;
+        }
+        .style11
+        {
+            font-size: x-small;
+        }
+        .style12
+        {
+            font-size: x-small;
+        }
+    </style>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+    <table class="style5">
+        <tr>
+            <td class="style6" colspan="5" style="text-align: center; color: #000000">
+                Add User Profile</td>
+        </tr>
+        <tr>
+            <td class="style12">
+                Select User Name:</td>
+            <td class="style8">
+                <asp:Label ID="Lbl_Sel_User" runat="server" Font-Size="Small" ForeColor="#FF3300" 
+                    Text="*"></asp:Label>
+                    </td>
+            <td class="style9">
+                        <asp:DropDownList ID="Drp_User" runat="server" Font-Size="X-Small">
+                        </asp:DropDownList>
+                        <asp:CompareValidator ID="Comp_Val_Sel_User" runat="server" 
+                            ControlToValidate="Drp_User" ErrorMessage="Required" Font-Size="X-Small" 
+                            ForeColor="#FF3300" Operator="NotEqual" ValueToCompare="0"></asp:CompareValidator>
+                    </td>
+            <td class="style10">
+                    <asp:Label ID="lblErrorMsg" runat="server" 
+                        style="color: #CC3300; font-weight: 700;"></asp:Label>
+            </td>
+            <td>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="style12">
+                &nbsp;</td>
+            <td class="style8">
+                &nbsp;</td>
+            <td class="style9">
+                &nbsp;</td>
+            <td class="style10">
+                &nbsp;</td>
+            <td>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="style7" colspan="4">
+                <strong>PERSONEL DETAILS:</strong></td>
+            <td>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="style12">
+                Date of Birth:</td>
+            <td class="style8">
+                &nbsp;</td>
+            <td class="style9">
+                &nbsp;</td>
+            <td class="style10">
+                &nbsp;</td>
+            <td>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="style12">
+                Martial Status:</td>
+            <td class="style8">
+                &nbsp;</td>
+            <td class="style9">
+                &nbsp;</td>
+            <td class="style10">
+                &nbsp;</td>
+            <td>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="style12">
+                Permanent Residential Address</td>
+            <td class="style8">
+                &nbsp;</td>
+            <td class="style9">
+                &nbsp;</td>
+            <td class="style10">
+                &nbsp;</td>
+            <td>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="style12">
+                Current Address:</td>
+            <td class="style8">
+                &nbsp;</td>
+            <td class="style9">
+                &nbsp;</td>
+            <td class="style10">
+                &nbsp;</td>
+            <td>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="style12">
+                Tel No (Residence)</td>
+            <td class="style8">
+                &nbsp;</td>
+            <td class="style9">
+                &nbsp;</td>
+            <td class="style10">
+                &nbsp;</td>
+            <td>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="style12">
+                Mobile No:</td>
+            <td class="style8">
+                &nbsp;</td>
+            <td class="style9">
+                &nbsp;</td>
+            <td class="style10">
+                &nbsp;</td>
+            <td>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="style12">
+                Date of Joining:</td>
+            <td class="style8">
+                &nbsp;</td>
+            <td class="style9">
+                &nbsp;</td>
+            <td class="style10">
+                &nbsp;</td>
+            <td>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="style12">
+                Designation:</td>
+            <td class="style8">
+                &nbsp;</td>
+            <td class="style9">
+                &nbsp;</td>
+            <td class="style10">
+                &nbsp;</td>
+            <td>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="style12">
+                Personel Email ID:</td>
+            <td class="style8">
+                &nbsp;</td>
+            <td class="style9">
+                &nbsp;</td>
+            <td class="style10">
+                &nbsp;</td>
+            <td>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="style12">
+                &nbsp;</td>
+            <td class="style8">
+                &nbsp;</td>
+            <td class="style9">
+                &nbsp;</td>
+            <td class="style10">
+                &nbsp;</td>
+            <td>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="style11" colspan="4">
+                EDUCATIONAL QUALIFICATION (latest first)</td>
+            <td>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="style12" colspan="4">
+                <asp:GridView ID="GridView1" runat="server">
+                </asp:GridView>
+            </td>
+            <td>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="style12">
+                &nbsp;</td>
+            <td class="style8">
+                &nbsp;</td>
+            <td class="style9">
+                &nbsp;</td>
+            <td class="style10">
+                &nbsp;</td>
+            <td>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="style12">
+                &nbsp;</td>
+            <td class="style8">
+                &nbsp;</td>
+            <td class="style9">
+                &nbsp;</td>
+            <td class="style10">
+                &nbsp;</td>
+            <td>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="style12">
+                &nbsp;</td>
+            <td class="style8">
+                &nbsp;</td>
+            <td class="style9">
+                &nbsp;</td>
+            <td class="style10">
+                &nbsp;</td>
+            <td>
+                &nbsp;</td>
+        </tr>
+    </table>
+</asp:Content>
